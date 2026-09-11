@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-09-11T19:36:32.561Z",
+  "revision": 349,
+  "count": 3,
+  "references": [
+    {
+      "column": "track",
+      "debugname": "music_Wilderness4",
+      "type": 77,
+      "value": "wilderness4",
+      "values": [
+        "wilderness4"
+      ]
+    },
+    {
+      "column": "convertobj",
+      "debugname": "magic_spell_enchant_level6",
+      "type": 80,
+      "value": "enchant_onyx_ring",
+      "values": [
+        "onyx_ring",
+        "enchanted_onyx_ring",
+        "human_cast_enchantring",
+        "enchant_ring",
+        "enchant_onyx_ring"
+      ]
+    },
+    {
+      "column": "convertobj",
+      "debugname": "magic_spell_enchant_level6",
+      "type": 80,
+      "value": "enchant_onyx_amulet",
+      "values": [
+        "strung_onyx_amulet",
+        "enchanted_onyx_amulet",
+        "human_enchantamuletlvl2",
+        "enchant_amulet2_lvl6",
+        "enchant_onyx_amulet"
+      ]
+    }
+  ]
+}

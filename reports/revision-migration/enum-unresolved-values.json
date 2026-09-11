@@ -1,0 +1,14 @@
+{
+  "generatedAt": "2026-09-11T19:36:32.577Z",
+  "revision": 349,
+  "count": 1,
+  "values": [
+    {
+      "enumName": "stat_members",
+      "role": "default",
+      "type": "int",
+      "value": "stat",
+      "fallback": -1
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "generatedAt": "2026-09-11T19:43:12.468Z",
+  "revision": 349,
+  "type": "varbit",
+  "count": 12,
+  "names": [
+    "mm_awowogei_access",
+    "mm_garkor_plot_revealed",
+    "rc_no_tally_required_air",
+    "rc_no_tally_required_mind",
+    "rc_no_tally_required_water",
+    "rc_no_tally_required_earth",
+    "rc_no_tally_required_fire",
+    "rc_no_tally_required_body",
+    "rc_no_tally_required_cosmic",
+    "varbit_693",
+    "varbit_764",
+    "varbit_766"
+  ]
+}

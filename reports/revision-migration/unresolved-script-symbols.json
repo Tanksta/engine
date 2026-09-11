@@ -1,0 +1,289 @@
+{
+  "generatedAt": "2026-09-11T19:43:12.915Z",
+  "revision": 349,
+  "count": 47,
+  "symbols": [
+    {
+      "kind": "component",
+      "id": 15917,
+      "name": "stats:slayer",
+      "reason": "No component entry exists in the active interface archive."
+    },
+    {
+      "kind": "component",
+      "id": 15918,
+      "name": "stats:farming",
+      "reason": "No component entry exists in the active interface archive."
+    },
+    {
+      "kind": "varbit",
+      "id": 358,
+      "name": "deserttreasure",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 359,
+      "name": "fd_trollchild_intro",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 360,
+      "name": "fd_torch_count1",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 361,
+      "name": "fd_torch_count2",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 362,
+      "name": "fd_torch_count3",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 363,
+      "name": "fd_torch_count4",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 364,
+      "name": "fd_firechest",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 365,
+      "name": "fd_magiclog",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 366,
+      "name": "fd_steelbar",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 367,
+      "name": "fd_glass",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 368,
+      "name": "fd_bones",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 369,
+      "name": "fd_ash",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 370,
+      "name": "fd_charcoal",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 371,
+      "name": "fd_bloodrune",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 372,
+      "name": "fdvw_cutscene",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 373,
+      "name": "fdvw_subquest",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 374,
+      "name": "fd_fw_warningspam",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 375,
+      "name": "fd_killed_ninja",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 376,
+      "name": "fd_killed_firewarrior",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 377,
+      "name": "fd_icewarrior_dead",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 378,
+      "name": "fd_icewarrior_trollskilled",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 379,
+      "name": "fd_icewarrior_bootshint",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 380,
+      "name": "fd_icewarrior_dadfree",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 381,
+      "name": "fd_icewarrior_mumfree",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 382,
+      "name": "fd_icewarrior_subquest",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 383,
+      "name": "fd_shadowwarrior_quest",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 384,
+      "name": "fd_banditchest_disarmed",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 385,
+      "name": "fd_shadowwar_intro",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 386,
+      "name": "fd_firewargate",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 387,
+      "name": "fd_column_fire",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 388,
+      "name": "fd_column_shadow",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 389,
+      "name": "fd_column_ice",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 390,
+      "name": "fd_column_blood",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 391,
+      "name": "fd_got_zaros_staff",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 392,
+      "name": "fd_mirror_present",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 393,
+      "name": "fd_ladder_present",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 394,
+      "name": "fd_pyramid_timer",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 607,
+      "name": "macro_digger_interface_slot_5",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 608,
+      "name": "macro_digger_interface_slot_6",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 609,
+      "name": "macro_digger_interface_slot_7",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 610,
+      "name": "macro_digger_interface_slot_8",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 611,
+      "name": "macro_digger_interface_slot_9",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 612,
+      "name": "macro_digger_interface_checker",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 613,
+      "name": "macro_digger_interface_temp",
+      "reason": "Base varp -1 is absent from the active cache config."
+    },
+    {
+      "kind": "varbit",
+      "id": 693,
+      "name": "rd_room2_missing_choice",
+      "reason": "Base varp -1 is absent from the active cache config."
+    }
+  ]
+}

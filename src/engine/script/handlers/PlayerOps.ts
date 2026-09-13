@@ -655,6 +655,27 @@ const PlayerOps: CommandHandlers = {
         state.activePlayer.teleJump(position.x, position.z, baseLevel + position.level);
     }),
 
+    [ScriptOpcode.ECTOFUNTUS_UNCLAIMED_TOKENS]: checkedHandler(ActivePlayer, state => {
+        state.pushInt(state.activePlayer.unclaimedEctoTokens);
+    }),
+
+    [ScriptOpcode.ECTOFUNTUS_ADD_UNCLAIMED_TOKENS]: checkedHandler(ActivePlayer, state => {
+        const tokens = state.popInt();
+        state.activePlayer.unclaimedEctoTokens = Math.max(0, state.activePlayer.unclaimedEctoTokens + tokens);
+    }),
+
+    [ScriptOpcode.ECTOFUNTUS_CLEAR_UNCLAIMED_TOKENS]: checkedHandler(ActivePlayer, state => {
+        state.activePlayer.unclaimedEctoTokens = 0;
+    }),
+
+    [ScriptOpcode.ECTOFUNTUS_PENDING_BONEMEAL]: checkedHandler(ActivePlayer, state => {
+        state.pushInt(state.activePlayer.pendingEctoBonemeal);
+    }),
+
+    [ScriptOpcode.ECTOFUNTUS_SET_PENDING_BONEMEAL]: checkedHandler(ActivePlayer, state => {
+        state.activePlayer.pendingEctoBonemeal = Math.max(0, state.popInt());
+    }),
+
     // https://x.com/JagexAsh/status/1697517518007541917
     // https://x.com/JagexAsh/status/1790684996480442796
     [ScriptOpcode.P_TELEPORT]: checkedHandler(ProtectedActivePlayer, state => {

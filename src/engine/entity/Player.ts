@@ -323,6 +323,9 @@ export default class Player extends PathingEntity {
         // last login info
         sav.p8(this.lastLoginTime);
 
+        sav.p4(this.unclaimedEctoTokens);
+        sav.p4(this.pendingEctoBonemeal);
+
         sav.p4(Packet.getcrc(sav.data, 0, sav.pos));
         return sav.data.subarray(0, sav.pos);
     }
@@ -462,6 +465,8 @@ export default class Player extends PathingEntity {
     homeCooldownUntil: number = -1;
     members: boolean = true;
     messageCount: number = 0;
+    unclaimedEctoTokens: number = 0;
+    pendingEctoBonemeal: number = 0;
 
     socialProtect: boolean = false; // social packet spam protection
     reportAbuseProtect: boolean = false; // social packet spam protection

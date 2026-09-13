@@ -9,7 +9,7 @@ import { fromBase37, toBase37 } from '#/util/JString.js';
 
 export class PlayerLoading {
     public static readonly SAV_MAGIC: number = 0x2004;
-    public static readonly SAV_VERSION: number = 13;
+    public static readonly SAV_VERSION: number = 14;
 
     static verify(sav: Packet) {
         if (sav.g2() !== PlayerLoading.SAV_MAGIC) {
@@ -202,6 +202,11 @@ export class PlayerLoading {
         // last login info
         if (version >= 6) {
             player.lastLoginTime = sav.g8();
+        }
+
+        if (version >= 14) {
+            player.unclaimedEctoTokens = sav.g4s();
+            player.pendingEctoBonemeal = sav.g4s();
         }
 
         player.combatLevel = player.getCombatLevel();

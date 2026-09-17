@@ -60,6 +60,9 @@ export default class TcpServer {
             s.on('timeout', () => {
                 if (client.player) {
                     client.player.addSessionLog(LoggerEventType.ENGINE, 'TCP socket timeout');
+                    if (client.player.idleLogoutDisabled) {
+                        return;
+                    }
                 }
 
                 s.destroy();

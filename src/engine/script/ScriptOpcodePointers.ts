@@ -582,6 +582,9 @@ const ScriptOpcodePointers: {
     [ScriptOpcode.IF_SETSCROLLPOS]: {
         require: ['active_player']
     },
+    [ScriptOpcode.IDLELOGOUT_DISABLE]: {
+        require: ['active_player']
+    },
     [ScriptOpcode.SET_PLAYER_OP]: {
         require: ['active_player']
     },

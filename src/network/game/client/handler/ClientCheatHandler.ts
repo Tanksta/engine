@@ -669,6 +669,7 @@ export default class ClientCheatHandler extends ClientGameMessageHandler<ClientC
 
                 if (player.idleLogoutDisabled) {
                     player.requestIdleLogout = false;
+                    player.idleLogoutAt = -1;
                 }
                 player.messageGame(`Stay logged in is now ${player.idleLogoutDisabled ? 'enabled' : 'disabled'}.`);
                 return true;

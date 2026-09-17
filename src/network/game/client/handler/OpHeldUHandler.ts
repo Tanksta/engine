@@ -86,6 +86,15 @@ export default class OpHeldUHandler extends ClientGameMessageHandler<OpHeldU> {
 
         player.clearPendingAction();
 
+        const rottenPotatoId = ObjType.getId('rotten_potato');
+        if (player.lastUseItem === rottenPotatoId) {
+            const script = ScriptProvider.getByTriggerSpecific(ServerTriggerType.OPHELDU, rottenPotatoId, -1);
+            if (script) {
+                player.executeScript(ScriptRunner.init(script, player), true);
+                return true;
+            }
+        }
+
         if ((objType.members || useObjType.members) && !Environment.NODE_MEMBERS) {
             player.messageGame("To use this item please login to a members' server.");
             return false;

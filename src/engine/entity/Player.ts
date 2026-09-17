@@ -567,6 +567,8 @@ export default class Player extends PathingEntity {
         this.chatMessage = null;
         this.chatRawMessage = null;
         this.logMessage = null;
+        this.idleLogoutDisabled = false;
+        this.requestIdleLogout = false;
         this.socialProtect = false;
         this.reportAbuseProtect = false;
     }

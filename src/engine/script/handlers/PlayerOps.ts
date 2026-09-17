@@ -1526,6 +1526,15 @@ const PlayerOps: CommandHandlers = {
         state.pushInt(state.activePlayer.runweight);
     }),
 
+    [ScriptOpcode.IDLELOGOUT_DISABLE]: checkedHandler(ActivePlayer, state => {
+        const disabled = state.popInt() !== 0;
+        state.activePlayer.idleLogoutDisabled = disabled;
+        if (disabled) {
+            state.activePlayer.requestIdleLogout = false;
+            state.activePlayer.idleLogoutAt = -1;
+        }
+    }),
+
     [ScriptOpcode.SESSION_LOG]: checkedHandler(ActivePlayer, state => {
         const eventType = state.popInt() + 2;
         const event = state.popString();

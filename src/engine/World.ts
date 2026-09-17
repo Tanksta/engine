@@ -779,17 +779,17 @@ class World {
         for (const player of this.playerLoop.all()) {
             let force = false;
             if (!player.syntheticAccount) {
-                if (this.shutdown || this.currentTick - player.lastResponse >= World.TIMEOUT_NO_RESPONSE) {
+                if (this.shutdown || (!player.idleLogoutDisabled && this.currentTick - player.lastResponse >= World.TIMEOUT_NO_RESPONSE)) {
                     // world shutdown or x-logged / timed out for 60s: force logout
                     player.loggingOut = true;
                     force = true;
-                } else if (this.currentTick - player.lastConnected >= World.TIMEOUT_NO_CONNECTION) {
+                } else if (!player.idleLogoutDisabled && this.currentTick - player.lastConnected >= World.TIMEOUT_NO_CONNECTION) {
                     // connection lost for 30s: request idle logout
                     player.requestIdleLogout = true;
                 }
             }
 
-            if (player.idleLogoutAt !== -1 && this.currentTick >= player.idleLogoutAt) {
+            if (!player.idleLogoutDisabled && player.idleLogoutAt !== -1 && this.currentTick >= player.idleLogoutAt) {
                 player.idleLogoutAt = -1;
                 player.requestIdleLogout = true;
             }
@@ -956,7 +956,7 @@ class World {
                 player.client.send(
                     Uint8Array.from([
                         2,
-                        Math.min(player.staffModLevel, 2),
+                        player.staffModLevel,
                         1 // mouse tracking can only be enabled on login
                     ])
                 );

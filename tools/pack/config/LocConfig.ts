@@ -149,6 +149,15 @@ export function parseLocConfig(key: string, value: string): ConfigValue | null |
             value: paramValue
         };
     } else if (key === 'forceapproach') {
+        if (/^[0-9]+$/.test(value)) {
+            const flags = parseInt(value);
+            if (flags < 0 || flags > 0b1111) {
+                return null;
+            }
+
+            return flags;
+        }
+
         let flags = 0b1111;
         switch (value) {
             case 'north':

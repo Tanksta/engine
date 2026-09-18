@@ -243,6 +243,7 @@ export const enum ScriptOpcode {
     NPC_KILLCOUNT,
     PET_ACQUIRED, // custom
     STAT_SETLEVEL,
+    IF_SETMODELOFFSET = 2491,
     IDLELOGOUT_DISABLE = 2492,
     STAT_EXPERIENCE = 2493,
     STAT_RESTORE_EXACT = 2494,
@@ -651,6 +652,7 @@ export const ScriptOpcodeMap: Map<string, number> = new Map([
     ['IF_SETCOLOUR', ScriptOpcode.IF_SETCOLOUR],
     ['IF_SETHIDE', ScriptOpcode.IF_SETHIDE],
     ['IF_SETMODEL', ScriptOpcode.IF_SETMODEL],
+    ['IF_SETMODELOFFSET', ScriptOpcode.IF_SETMODELOFFSET],
     ['IF_SETNPCHEAD', ScriptOpcode.IF_SETNPCHEAD],
     ['IF_SETOBJECT', ScriptOpcode.IF_SETOBJECT],
     ['IF_SETPLAYERHEAD', ScriptOpcode.IF_SETPLAYERHEAD],

@@ -14,6 +14,7 @@ export default class ServerGameProt {
     static readonly IF_SETHIDE = new ServerGameProt(136, 3);
     static readonly IF_SETOBJECT = new ServerGameProt(106, 6);
     static readonly IF_SETMODEL = new ServerGameProt(84, 4);
+    static readonly IF_SETMODELOFFSET = new ServerGameProt(23, 6);
     static readonly IF_SETANIM = new ServerGameProt(1, 4);
     static readonly IF_SETPLAYERHEAD = new ServerGameProt(30, 2);
     static readonly IF_SETTEXT = new ServerGameProt(223, -2);

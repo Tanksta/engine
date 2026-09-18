@@ -52,6 +52,7 @@ import IfSetAnim from '#/network/game/server/model/IfSetAnim.js';
 import IfSetColour from '#/network/game/server/model/IfSetColour.js';
 import IfSetHide from '#/network/game/server/model/IfSetHide.js';
 import IfSetModel from '#/network/game/server/model/IfSetModel.js';
+import IfSetModelOffset from '#/network/game/server/model/IfSetModelOffset.js';
 import IfSetNpcHead from '#/network/game/server/model/IfSetNpcHead.js';
 import IfSetObject from '#/network/game/server/model/IfSetObject.js';
 import IfSetPlayerHead from '#/network/game/server/model/IfSetPlayerHead.js';
@@ -940,6 +941,16 @@ const PlayerOps: CommandHandlers = {
         check(model, NumberNotNull);
 
         state.activePlayer.write(new IfSetModel(com, model));
+    }),
+
+    [ScriptOpcode.IF_SETMODELOFFSET]: checkedHandler(ActivePlayer, state => {
+        const [com, x, y] = state.popInts(3);
+
+        check(com, NumberNotNull);
+        check(x, NumberNotNull);
+        check(y, NumberNotNull);
+
+        state.activePlayer.write(new IfSetModelOffset(com, x, y));
     }),
 
     [ScriptOpcode.TUT_FLASH]: checkedHandler(ActivePlayer, state => {

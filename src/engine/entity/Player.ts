@@ -1423,6 +1423,12 @@ export default class Player extends PathingEntity {
         const opTrigger = this.getOpTrigger();
         const apTrigger = this.getApTrigger();
 
+        if (!opTrigger && !apTrigger && this.isFarmingPatchMembersOp()) {
+            this.messageGame("You must login to a members' world to access this content.");
+            this.clearWaypoints();
+            return;
+        }
+
         if (!Environment.NODE_PRODUCTION && !opTrigger && !apTrigger) {
             let debugname = '_';
             if (this.target instanceof Npc) {
@@ -1445,6 +1451,38 @@ export default class Player extends PathingEntity {
         }
 
         this.clearWaypoints();
+    }
+
+    isFarmingPatchMembersOp(): boolean {
+        if (Environment.NODE_MEMBERS || !(this.target instanceof Loc)) {
+            return false;
+        }
+
+        const type = this.resolveLocType(this.target);
+        const ops = type?.op;
+        if (!type || !ops) {
+            return false;
+        }
+
+        if (this.targetOp === ServerTriggerType.APLOC2 && ops[1]?.toLowerCase() !== 'inspect') {
+            return false;
+        }
+        if (this.targetOp === ServerTriggerType.APLOC4 && ops[3]?.toLowerCase() !== 'guide') {
+            return false;
+        }
+        if (this.targetOp !== ServerTriggerType.APLOC2 && this.targetOp !== ServerTriggerType.APLOC4) {
+            return false;
+        }
+
+        const debugname = type.debugname?.toLowerCase() ?? '';
+        const name = type.name?.toLowerCase() ?? '';
+        const desc = type.desc?.toLowerCase() ?? '';
+        return (
+            debugname.includes('patch') ||
+            debugname.startsWith('farming_') ||
+            desc.includes('patch') ||
+            name.includes('patch')
+        );
     }
 
     inOperableDistance(target: Entity): boolean {
@@ -1471,6 +1509,12 @@ export default class Player extends PathingEntity {
 
         const opTrigger = this.getOpTrigger();
         const apTrigger = this.getApTrigger();
+
+        if (this.isFarmingPatchMembersOp() && this.inApproachDistance(this.apRange, this.target)) {
+            this.messageGame("You must login to a members' world to access this content.");
+            this.clearWaypoints();
+            return true;
+        }
 
         // Run the opTrigger if it exists and Player is within range
         // allowOpScenery controls if Locs and Objs can be op'd

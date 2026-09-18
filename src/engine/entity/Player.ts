@@ -1510,7 +1510,7 @@ export default class Player extends PathingEntity {
         const opTrigger = this.getOpTrigger();
         const apTrigger = this.getApTrigger();
 
-        if (this.isFarmingPatchMembersOp() && this.inApproachDistance(this.apRange, this.target)) {
+        if (this.isFarmingPatchMembersOp() && this.inOperableDistance(this.target)) {
             this.messageGame("You must login to a members' world to access this content.");
             this.clearWaypoints();
             return true;
